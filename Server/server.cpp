@@ -87,8 +87,9 @@ void* client_thread(void *args){
 			if(started && alive){
 				loot(&character,skt,&Rooms,&Clients,&Monsters,&Dead_Players);
 			}
-                        else
+                        else{
                                 error(skt,type,5);
+			}
                         //mtx.unlock();
 		}
 		else if(type == 6){
